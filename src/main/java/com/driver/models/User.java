@@ -8,14 +8,14 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String username;
-    private String password;
+    private int Id;
+    private String userName;
+    private String passWord;
     private String firstName;
     private String lastName;
     public User(String username, String password, String firstName, String lastName) {
-        this.username = username;
-        this.password = password;
+        this.userName = username;
+        this.passWord = password;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -23,27 +23,27 @@ public class User {
     }
     public int getId() {
 
-        return id;
+        return Id;
     }
     public void setId(int id) {
 
-        this.id = id;
+        this.Id = id;
     }
     public String getUsername() {
 
-        return username;
+        return userName;
     }
     public void setUsername(String username) {
 
-        this.username = username;
+        this.userName = username;
     }
     public String getPassword() {
 
-        return password;
+        return passWord;
     }
     public void setPassword(String password) {
 
-        this.password = password;
+        this.passWord = password;
     }
     public String getFirstName() {
 

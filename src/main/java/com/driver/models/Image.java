@@ -8,48 +8,49 @@ import javax.persistence.*;
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String description;
+    private int Id;
+    private String Description;
     @Column(nullable = false)
-    private String dimensions;
+    private String Dimensions;
     public Image() {
     }
     public Image(String description, String dimensions) {
-        this.description = description;
-        this.dimensions = dimensions;
+        this.Description = description;
+        this.Dimensions = dimensions;
     }
     public int getId() {
 
-        return id;
+        return Id;
     }
     public void setId(int id) {
 
-        this.id = id;
+        this.Id = id;
     }
     public String getDescription() {
 
-        return description;
+        return Description;
     }
     public void setDescription(String description) {
-        this.description = description;
+        this.Description = description;
     }
     public String getDimensions() {
 
-        return dimensions;
+        return Dimensions;
     }
     public void setDimensions(String dimensions) {
 
-        this.dimensions = dimensions;
+        this.Dimensions = dimensions;
     }
     @ManyToOne
     @JoinColumn
     private Blog blog;
-    public Blog getBlog() {
-
-        return blog;
-    }
     public void setBlog(Blog blog) {
 
         this.blog = blog;
     }
+    public Blog getBlog() {
+
+        return blog;
+    }
+
 }

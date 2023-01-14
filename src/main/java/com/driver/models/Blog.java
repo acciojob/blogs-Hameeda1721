@@ -8,47 +8,47 @@ import java.util.List;
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String title;
-    private String content;
-    private Date pubDate;
+    private int Id;
+    private String Title;
+    private String Context;
+    private Date Date;
     public Blog() {
     }
     public int getId() {
 
-        return id;
+        return Id;
     }
     public void setId(int id) {
 
-        this.id = id;
+        this.Id = id;
     }
     public String getTitle() {
 
-        return title;
+        return Title;
     }
     public void setTitle(String title) {
 
-        this.title = title;
+        this.Title = title;
     }
     public String getContent() {
 
-        return content;
+        return Context;
     }
     public void setContent(String content) {
 
-        this.content = content;
+        this.Context = content;
     }
     public Date getPubDate() {
 
-        return pubDate;
+        return Date;
     }
     public void setPubDate(Date pubDate) {
 
-        this.pubDate = pubDate;
+        this.Date = Date;
     }
     public Blog(String title, String content) {
-        this.title = title;
-        this.content = content;
+        this.Title = title;
+        this.Context = content;
     }
     @ManyToOne
     @JoinColumn
